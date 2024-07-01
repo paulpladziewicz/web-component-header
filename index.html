@@ -9,11 +9,15 @@
     <title>Web Component Header</title>
 </head>
 <body>
-<platform-header title="Welcome to the Platform"></platform-header>
+<div id="headerContainer">
+    <platform-header title="Welcome to the Platform"></platform-header>
+</div>
 
 <button id="changeTitleButton1">Change Title to "New Title 1"</button>
 <button id="changeTitleButton2">Change Title to "New Title 2"</button>
 <button id="resetTitleButton">Reset to Default Title</button>
+<button id="removeComponentButton">Remove Component</button>
+<button id="addComponentButton">Add Component</button>
 
 <script type="module" src="./main.js"></script>
 <script>
@@ -27,6 +31,21 @@
 
     document.getElementById('resetTitleButton').addEventListener('click', () => {
         document.querySelector('platform-header').resetTitle();
+    });
+
+    document.getElementById('removeComponentButton').addEventListener('click', () => {
+        const component = document.querySelector('platform-header');
+        if (component) {
+            component.remove();
+        }
+    });
+
+    document.getElementById('addComponentButton').addEventListener('click', () => {
+        const container = document.querySelector('#headerContainer');
+        if (!document.querySelector('platform-header')) {
+            const newComponent = document.createElement('platform-header');
+            container.appendChild(newComponent);
+        }
     });
 </script>
 </body>

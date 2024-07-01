@@ -33,6 +33,14 @@ class Header extends HTMLElement {
 
     }
 
+    connectedCallback() {
+        console.log('web component header added to the DOM')
+    }
+
+    disconnectedCallback() {
+        console.log('web component header removed to the DOM')
+    }
+
     resetTitle() {
         this.title = this.defaultTitle;
     }
