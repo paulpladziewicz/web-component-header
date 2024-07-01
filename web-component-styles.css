@@ -3,13 +3,17 @@ body {
     background-color: gray;
 }
 
-/* has no effect within web component */
-button {
-    padding: 12px 8px;
-}
-
 #title {
     font-size: 3rem;
     font-weight: 700;
+}
+
+/* CSS pseudo-class for styling the host element itself, rather than its shadow DOM content*/
+:host {
+    display: block;
+    margin-bottom: 1rem;
+    width: fit-content;
+    padding: 0.75rem;
+    border: gray solid 2px;
 }
 
