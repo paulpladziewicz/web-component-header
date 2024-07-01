@@ -1,0 +1,15 @@
+/* has no effect within web component */
+body {
+    background-color: gray;
+}
+
+/* has no effect within web component */
+button {
+    padding: 12px 8px;
+}
+
+#title {
+    font-size: 3rem;
+    font-weight: 700;
+}
+

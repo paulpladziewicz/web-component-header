@@ -1,0 +1,9 @@
+/* has no effect within web component */
+#title {
+    background-color: gray;
+}
+
+button {
+    padding: 12px 8px;
+    cursor: pointer;
+}

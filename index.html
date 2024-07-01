@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./global-styles.css" />
+    <title>Web Component Header</title>
+</head>
+<body>
+<platform-header title="Welcome to the Platform"></platform-header>
+
+<button id="changeTitleButton1">Change Title to "New Title 1"</button>
+<button id="changeTitleButton2">Change Title to "New Title 2"</button>
+<button id="resetTitleButton">Reset to Default Title</button>
+
+<script type="module" src="./main.js"></script>
+<script>
+    document.getElementById('changeTitleButton1').addEventListener('click', () => {
+        document.querySelector('platform-header').setAttribute('title', 'New Title 1');
+    });
+
+    document.getElementById('changeTitleButton2').addEventListener('click', () => {
+        document.querySelector('platform-header').setAttribute('title', 'New Title 2');
+    });
+
+    document.getElementById('resetTitleButton').addEventListener('click', () => {
+        document.querySelector('platform-header').resetTitle();
+    });
+</script>
+</body>
+</html>
